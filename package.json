@@ -13,8 +13,8 @@
     "build:examples": "npm run build && npx cpx 'build/**/*.{js,map}' examples/js",
     "start": "rollup -c -w",
     "lint": "eslint -c .eslintrc.json --fix src && prettier --tab-width 4 --write src/**/*.js",
-    "prepublishOnly": "npm run build && npm run build:release",
-    "prepare": "npm run build && npm run build:release"
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
