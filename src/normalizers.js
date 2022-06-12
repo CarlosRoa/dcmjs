@@ -53,6 +53,7 @@ class Normalizer {
         ] = PETImageNormalizer;
         sopClassUIDMap[toUID.Segmentation] = SEGImageNormalizer;
         sopClassUIDMap[toUID.DeformableSpatialRegistration] = DSRNormalizer;
+        sopClassUIDMap[toUID.ComputedRadiographyImageStorage] = PMImageNormalizer;
         return sopClassUIDMap[sopClassUID];
     }
 
