@@ -166,12 +166,14 @@ class ImageNormalizer extends Normalizer {
         // TODO: sorting can be seen as part of generation of the Dimension Multiframe Dimension Module
         // and should really be done in an acquisition-specific way (e.g. for DCE)
         let referencePosition = referenceDataset.ImagePositionPatient;
+        let rowVector
+        let columnVector
         if(referenceDataset.ImageOrientationPatient) {
-            let rowVector = referenceDataset.ImageOrientationPatient.slice(0, 3) || null;
-            let columnVector = referenceDataset.ImageOrientationPatient.slice(3, 6) || null;
+            rowVector = referenceDataset.ImageOrientationPatient.slice(0, 3) || null;
+            columnVector = referenceDataset.ImageOrientationPatient.slice(3, 6) || null;
         } else {
-            let rowVector = null
-            let columnVector = null     
+            rowVector = null
+            columnVector = null     
         }
         let scanAxis = ImageNormalizer.vec3CrossProduct(
             rowVector,
