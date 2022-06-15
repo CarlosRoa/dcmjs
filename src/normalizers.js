@@ -240,6 +240,9 @@ class ImageNormalizer extends Normalizer {
             );
         }
         let [distance0, dataset0] = distanceDatasetPairs[0];
+        if(!distanceDatasetPairs[1]) {
+            distanceDatasetPairs[1] = distanceDatasetPairs[0];
+        }
         let distance1 = distanceDatasetPairs[1][0];
 
         //
