@@ -532,6 +532,10 @@ class DSRNormalizer extends Normalizer {
     normalize() {
         this.dataset = this.datasets[0]; // only one dataset per series and for now we assume it is normalized
     }
+    normalizeMultiframe() {
+        super.normalizeMultiframe();
+        let ds = this.datasets[0];
+    }
 }
 
 export { Normalizer };
